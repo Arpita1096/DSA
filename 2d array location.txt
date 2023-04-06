@@ -1,0 +1,27 @@
+#include<stdio.h>
+void location(int base,int w,int i,int j);
+void main()
+{
+    int base,w,i,j;
+    printf("Enter base address:");
+    scanf("%d",&base);
+    printf("Enter value of w:");
+    scanf("%d",&w);
+    printf("Enter value of i:");
+    scanf("%d",&i);
+    printf("Enter value of j:");
+    scanf("%d",&j);
+    location(base,w,i,j);
+}
+void location(int base,int w,int i,int j)
+{
+    int location1,location2,l1,l2,u1,u2;
+    printf("Enter value of l1,l2,u1,u2:");
+    scanf("%d %d %d %d",&l1,&l2,&u1,&u2);
+    int n=u2-l2+1;
+    location1=base+w*(n*(i-l1)+(j-l2));
+    printf("Location in row major order is:%d\n",location1);
+    int m=u1-l1+1;
+    location2=base+w*(m*(j-l2)+(i-l1));
+    printf("Location in column major order is:%d",location2);
+}

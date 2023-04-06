@@ -1,0 +1,20 @@
+#include<stdio.h>
+void location(int,int,int);
+int main()
+{
+    int arr[50],base,w,k;
+    printf("Enter base address:\n");
+    scanf("%d",&base);
+    printf("Enter value of w:\n");
+    scanf("%d",&w);
+    printf("Enter value of k:\n");
+    scanf("%d",&k);
+    location(base,w,k);
+    return 0;
+}
+void location(int base,int w,int k)
+{
+   int location;
+   location=base+(w*k);
+   printf("Location=%d",location);
+}

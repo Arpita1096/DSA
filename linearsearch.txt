@@ -1,0 +1,32 @@
+#include<stdio.h>
+void main()
+{
+    int num[20],i,search,n;
+    printf("Enter number of elements to be entered in an array:");
+    scanf("%d",&n);
+    if(n>20)
+    {
+        printf("Enter valid value of n.");
+    }
+    else
+    {
+        for(i=0;i<n;i++)
+        {
+            scanf("%d",&num[i]);
+        }
+        printf("\nEnter number to be searched:");
+        scanf("%d",&search);
+        for(i=0;i<n;i++)
+        {
+        if(num[i]==search)
+        {
+            printf("number found.");
+            break;
+        }
+        if(i==n)
+        {
+            printf("Number not found");
+        }
+        }
+    }
+}
