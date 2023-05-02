@@ -82,6 +82,6 @@ void pop()
     {
         printf("Popped item:%d",temp->info);
         top = top->next;
-        free(temp);
+        top--;
     }
 }
