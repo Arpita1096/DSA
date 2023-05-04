@@ -53,7 +53,7 @@ void display()
     }
     else
     {
-        while(top != 0)
+        while(temp != 0)
         {
             printf("%d->",temp->info);
             temp = temp->next;
